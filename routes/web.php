@@ -66,6 +66,8 @@ Route::get('download/{path}', [clientController::class, 'download']);
 Route::get('privacy', [pageController::class, 'privacy']);
 Route::get('terms', [pageController::class, 'terms']);
 Route::post('language', [lanController::class,'language']);
+Route::get('products', [pageController::class,'products']);
+Route::get('product/{id}', [pageController::class,'product']);
 
 
 

@@ -136,5 +136,6 @@
     <orderEntry type="library" name="2e7d7272e8" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="axios" level="application" />
+    <orderEntry type="library" name="daisyui" level="application" />
   </component>
 </module>

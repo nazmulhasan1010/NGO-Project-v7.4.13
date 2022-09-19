@@ -2,17 +2,17 @@
 @if($slider)
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+            @foreach($slider as $kay=>$sliders)
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$kay}}"
+                        class="{{$kay==0?'active':''}}"
+                        aria-current="true" aria-label="Slide {{$kay}}"></button>
+            @endforeach
+
         </div>
         <div class="carousel-inner">
-            @foreach($slider as $sliders)
+            @foreach($slider as $kay=>$sliders)
                 @if($sliders->status==1)
-                    <div class="carousel-item active">
+                    <div class="carousel-item {{ $kay== "0" ? 'active' : '' }} ">
                         <div class="content" style="background-image: linear-gradient(rgba(51, 51, 51, 0.486),
                    rgba(51, 51, 51, 0.486)),url('{{asset('storage/' . $sliders->image)}}');">
                             @if($sliders->title&&$sliders->description)

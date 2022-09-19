@@ -20,18 +20,10 @@ use Illuminate\Support\Facades\App;
 
 class frontHomeController extends Controller
 {
-//    public function __construct()
-//    {
-//        if (session()->has('language')) {
-//            $lanCode = session()->get('language');
-//            App::setLocale($lanCode);
-//        }
-//    }
 
     public function index()
     {
-
-        $slider = Slider::orderBy('id', 'desc')->get();
+        $slider = Slider::get();
         $area = Workingarea::latest()->first();
         $activities = Activity::latest()->take(3)->get();
         $event = Event::latest()->take(3)->get();

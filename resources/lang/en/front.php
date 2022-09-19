@@ -7,11 +7,13 @@ return[
     'mission'=>'mission',
     'imgG'=>'Image gallery',
     'entre'=>'Entrepreneurs',
+    'entres'=>'Entrepreneurs',
     'stories'=>'Success Stories',
     'events'=>'Events',
     'news'=>'News',
     'blog'=>'Blog',
     'notice'=>'Notice',
+
     'project'=>'Project',
     'summary'=>'Summary',
     'working'=>'Working',

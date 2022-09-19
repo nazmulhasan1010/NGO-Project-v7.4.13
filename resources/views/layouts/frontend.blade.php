@@ -20,6 +20,9 @@
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
 
     <!-- Styles -->
+    {{--    tailwindcss--}}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.28.0/dist/full.css" rel="stylesheet" type="text/css" />
     {{--    <link href="{{ asset('assets/frontend/css/main.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('assets/frontend/scss/main.css') }}" rel="stylesheet">
     {{--    <link href="{{ asset('assets/frontend/css/responsive.css') }}" rel="stylesheet">--}}

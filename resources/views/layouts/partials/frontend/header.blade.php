@@ -14,8 +14,15 @@
         @csrf
         <input type="hidden" name="lanStatus" id="lanStatus" value="0" hidden>
         <button type="button" class="lan_cng_btn" id="lanBtn">
-            <label class="lanEnOn {{session()->get('language')=='en'?'on':'off'}}">EN</label>
-            <label class="lanBnOn {{session()->get('language')=='bn'?'on':'off'}}">BN</label>
+            @php
+               if (session()->has('language')){
+                   $lan = session()->get('language');
+               }else{
+                   $lan = App::currentLocale();
+               }
+            @endphp
+            <label class="lanEnOn {{$lan=='en'?'on':'off'}}">EN</label>
+            <label class="lanBnOn {{$lan=='bn'?'on':'off'}}">BN</label>
         </button>
     </form>
 </div><!-- contact modal end -->
@@ -85,6 +92,11 @@
                 <a href="{{url('/faq')}}">
                     <li>
                         <div class="option-head">FAQ</div>
+                    </li>
+                </a>
+                <a href="{{url('/products')}}">
+                    <li>
+                        <div class="option-head">products</div>
                     </li>
                 </a>
                 <a href="{{url('events')}}">

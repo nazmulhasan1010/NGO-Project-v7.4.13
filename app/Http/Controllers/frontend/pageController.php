@@ -129,11 +129,13 @@ class pageController extends Controller
     {
         return view('frontend.pages.termsConditions');
     }
-    public function language($lan): void
+    public function products(){
+        return view('frontend.pages.product.products');
+    }
+
+    public function product()
     {
-        if ($lan){
-            App::setLocale($lan);
-        }
+        return view('frontend.pages.product.products');
     }
 
 }

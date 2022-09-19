@@ -3,23 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class lanController extends Controller
 {
-    public function language(Request $request): string
+    public function language(Request $request)
     {
-        $lanCode = $request->input('lanStatus');
-        $lan = $lanCode == 1 ? 'bn' : 'en';
-        if(session()->has('lanStatus')){
-           if (session()->get('lanStatus') == $lan){
-               return 'no';
-           }else{
-               session()->put('language', $lan);
-               return 'ok';
-           }
+        if (session()->has('language')){
+            $lan = session()->get('language');
         }else{
-            session()->put('language', $lan);
-            return 'ok';
+            $lan = App::currentLocale();
         }
+        $lanC = $lan == 'en' ? 'bn' : 'en';
+        session()->put('language', $lanC);
     }
 }

@@ -1,22 +1,7 @@
-let clicks = 0;
-$('#lanBtn').click(function () {
-    clicks++;
-    const result = (clicks % 2 === 0) ? "even" : "odd";
-    if (result === 'even') {
-        $('.lanBnOn').addClass('off').removeClass('on');
-        $('.lanEnOn').addClass('on').removeClass('off');
-        $('#lanStatus').val(0);
-    } else if(result === 'odd') {
-        $('.lanEnOn').addClass('off').removeClass('0n');
-        $('.lanBnOn').addClass('on').removeClass('off');
-        $('#lanStatus').val(1);
-    }
-    let lanStatus = $('#lanStatus').val();
 
-    axios.post('language', {
-        'lanStatus': lanStatus,
-    }).then(function (response) {
-        if (response.status === 200 && response.data === 'ok') {
+$('#lanBtn').click(function () {
+    axios.post('language').then(function (response) {
+        if (response.status === 200 ) {
             window.location.reload();
         }
     }).catch(function (error) {
