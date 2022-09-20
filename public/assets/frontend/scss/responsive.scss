@@ -139,6 +139,22 @@
     }
 }
 
+/* ------------------------------1070px-------------------------- */
+@media screen and (max-width: 1070px) {
+    .products {
+        justify-content: left;
+
+        .product {
+            padding: 0;
+            border-radius: 10px;
+
+            img {
+                height: 220px;
+            }
+        }
+    }
+}
+
 /* ------------------------------1020px-------------------------- */
 @media screen and (max-width: 1020px) {
     .event-notices {
@@ -164,6 +180,18 @@
         }
     }
 
+    .products {
+        justify-content: left;
+
+        .product {
+            padding: 0;
+            border-radius: 10px;
+
+            img {
+                height: 180px;
+            }
+        }
+    }
 }
 
 /* ------------------------------900px-------------------------- */
@@ -198,6 +226,31 @@
             h2 {
                 font-size: 2rem;
             }
+        }
+    }
+
+    .products {
+        justify-content: left;
+
+        .product {
+            padding: 0;
+            border-radius: 10px;
+
+            img {
+                height: 180px;
+            }
+
+            .card-body {
+                .product-card-footer {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                     .more-button {
+                         margin-top: 10px;
+                     }
+                }
+            }
+
         }
     }
 }
@@ -360,12 +413,13 @@
 
                     &:nth-child(1) {
                         border: none;
-                        
+
                     }
 
                     &:nth-child(2) {
                         border: 2px solid none;
                     }
+
                     .date {
                         border-radius: 4px;
                     }
@@ -455,6 +509,18 @@
             width: 10%;
         }
     }
+    .products {
+        justify-content: left;
+
+        .product {
+            padding: 0;
+            border-radius: 10px;
+
+            img {
+                height: 300px;
+            }
+        }
+    }
 }
 
 .faq-main {
@@ -538,6 +604,7 @@
 @media screen and (max-width: 410px) {
     .content-80 {
         width: 100%;
+        padding: 0 10px;
     }
 
     .gallery {

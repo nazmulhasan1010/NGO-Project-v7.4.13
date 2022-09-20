@@ -120,6 +120,21 @@
     height: 120px;
   }
 }
+/* ------------------------------1070px-------------------------- */
+@media screen and (max-width: 1070px) {
+  .products {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .products .product {
+    padding: 0;
+    border-radius: 10px;
+  }
+  .products .product img {
+    height: 220px;
+  }
+}
 /* ------------------------------1020px-------------------------- */
 @media screen and (max-width: 1020px) {
   .event-notices .event-notice .notice {
@@ -136,6 +151,18 @@
   }
   .header .menu_bar {
     width: 20%;
+  }
+  .products {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .products .product {
+    padding: 0;
+    border-radius: 10px;
+  }
+  .products .product img {
+    height: 180px;
   }
 }
 /* ------------------------------900px-------------------------- */
@@ -158,6 +185,32 @@
   }
   .project_summary .summary h2 {
     font-size: 2rem;
+  }
+  .products {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .products .product {
+    padding: 0;
+    border-radius: 10px;
+  }
+  .products .product img {
+    height: 180px;
+  }
+  .products .product .card-body .product-card-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .products .product .card-body .product-card-footer .more-button {
+    margin-top: 10px;
   }
 }
 /* ------------------------------768px-------------------------- */
@@ -379,6 +432,18 @@
   .contact_modal .right {
     width: 10%;
   }
+  .products {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .products .product {
+    padding: 0;
+    border-radius: 10px;
+  }
+  .products .product img {
+    height: 300px;
+  }
 }
 .faq-main .faq-field .faq-fields {
   padding: 0 10px;
@@ -424,6 +489,7 @@
 @media screen and (max-width: 410px) {
   .content-80 {
     width: 100%;
+    padding: 0 10px;
   }
   .gallery {
     padding: 20px;

@@ -19,6 +19,7 @@ class clientController extends Controller
             $message->name = $request->clientName;
             $message->email = $request->clientMail;
             $message->message = $request->clientMessage;
+            $message->contact = $request->clientContact;
             $message->save();
             return redirect()->back();
         } catch (\Exception $e) {
@@ -26,8 +27,9 @@ class clientController extends Controller
         }
 
     }
+
     public function download($path): \Symfony\Component\HttpFoundation\StreamedResponse
     {
-        return Storage::download('public/notice/'.$path);
+        return Storage::download('public/notice/' . $path);
     }
 }

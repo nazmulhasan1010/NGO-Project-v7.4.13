@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\aboutController;
 use App\Http\Controllers\Backend\activityController;
 use App\Http\Controllers\Backend\beneficiaryLocationsController;
 use App\Http\Controllers\Backend\blogController;
+use App\Http\Controllers\Backend\clientMessagesController;
 use App\Http\Controllers\Backend\contactController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\developmentComponentController;
@@ -112,6 +113,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('logo', logoController::class);
     Route::resource('terms', termsController::class);
     Route::resource('privacy', privacyController::class);
+    Route::resource('clientMessages', clientMessagesController::class);
 });
 
 //test

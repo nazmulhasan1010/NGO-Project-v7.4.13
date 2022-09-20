@@ -1,4 +1,3 @@
-
 <div class="nav-header">
     <div class="nav-control">
         <div class="hamburger">
@@ -28,10 +27,15 @@
                     </div>
                 </div>
                 <ul class="navbar-nav header-right main-notification">
-
+                    <li class="nav-item dropdown header-profile">
+                        <a class="nav-link" href="{{route('clientMessages.index')}}"  >
+                            <i class="fa-solid fa-message" style="font-size:2rem;color:#eb8153;"></i>
+                        </a>
+                    </li>
                     <li class="nav-item dropdown header-profile">
                         <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-{{--                            <img src="{{ asset('assets/backend/images/profile/pic1.jpg')}}" width="20" alt="user"/>--}}
+
+                            {{--                            <img src="{{ asset('assets/backend/images/profile/pic1.jpg')}}" width="20" alt="user"/>--}}
                             <div class="header-info">
                                 <span>{{ Auth::user()->name }}</span>
                                 <small>Super Admin</small>

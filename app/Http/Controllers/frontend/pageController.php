@@ -135,7 +135,7 @@ class pageController extends Controller
 
     public function product()
     {
-        return view('frontend.pages.product.products');
+        return view('frontend.pages.product.product');
     }
 
 }

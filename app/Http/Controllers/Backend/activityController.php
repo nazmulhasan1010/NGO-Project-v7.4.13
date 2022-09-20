@@ -30,8 +30,6 @@ class activityController extends Controller
             Toastr::warning($e->getMessage());
             return redirect()->back();
         }
-
-
     }
 
     /**

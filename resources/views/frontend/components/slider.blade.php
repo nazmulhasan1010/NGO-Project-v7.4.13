@@ -11,8 +11,8 @@
         </div>
         <div class="carousel-inner">
             @foreach($slider as $kay=>$sliders)
-                @if($sliders->status==1)
-                    <div class="carousel-item {{ $kay== "0" ? 'active' : '' }} ">
+                @if($sliders->status===1)
+                    <div class="carousel-item {{ $kay=== 0 ? 'active' : '' }} ">
                         <div class="content" style="background-image: linear-gradient(rgba(51, 51, 51, 0.486),
                    rgba(51, 51, 51, 0.486)),url('{{asset('storage/' . $sliders->image)}}');">
                             @if($sliders->title&&$sliders->description)

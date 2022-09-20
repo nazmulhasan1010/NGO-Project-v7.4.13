@@ -18,6 +18,7 @@ class Message extends Migration
             $table->string('name',100)->nullable();
             $table->string('email',100)->nullable();
             $table->string('message',2000)->nullable();
+            $table->string('contact',20)->nullable();
             $table->timestamps();
         });
     }
