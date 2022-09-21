@@ -92,6 +92,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{route('products.index')}}" class="ai-icon" aria-expanded="false">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="nav-text">Products</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{route('activity.index')}}" class="ai-icon" aria-expanded="false">
                     <i class="fa-solid fa-chart-line"></i>
                     <span class="nav-text">Project Activities</span>

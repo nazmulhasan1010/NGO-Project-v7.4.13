@@ -18,6 +18,7 @@ use App\Models\News;
 use App\Models\Blog;
 use App\Models\Notice;
 use App\Models\Logo;
+use App\Models\Message;
 
 if (!function_exists('getCommunication')) {
     function getCommunication(): array
@@ -169,5 +170,16 @@ if (!function_exists('getTerms')){
 if (!function_exists('getPrivacy')) {
     function getPrivacy()    {
         return Privacy::where('status', '=', 1)->take(1)->get();
+    }
+}
+if (!function_exists('getMessage')){
+    function getMessage($start, $limit, $sta){
+        if ($sta === 'all') {
+            return Message::get();
+        }elseif ($sta === 'spe') {
+            return Message::where('id', '>', $start)->take($limit)->get();
+        } else {
+            return Message::where('id', '=', $start)->get();
+        }
     }
 }

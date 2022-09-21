@@ -42,7 +42,6 @@
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-
                             <a class="dropdown-item ai-icon" href="{{route('logout') }}"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18"

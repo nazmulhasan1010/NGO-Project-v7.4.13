@@ -113,6 +113,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('logo', logoController::class);
     Route::resource('terms', termsController::class);
     Route::resource('privacy', privacyController::class);
+    Route::resource('products', productController::class);
     Route::resource('clientMessages', clientMessagesController::class);
 });
 

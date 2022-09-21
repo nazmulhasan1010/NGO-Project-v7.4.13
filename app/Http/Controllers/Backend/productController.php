@@ -25,7 +25,7 @@ class productController extends Controller
     {
         try {
             $products = Product::latest()->get();
-            return view('backend.aboutCrab.products', compact('products'));
+            return view('backend.products.products', compact('products'));
         } catch (\Exception $e) {
             Toastr::warning($e->getMessage());
             return redirect()->back();
